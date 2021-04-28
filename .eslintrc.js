@@ -12,6 +12,7 @@ module.exports = {
     'import/named': 'off',
   },
   settings: {'import/resolver': 'node'},
+
   overrides: [
     {
       files: ['**/src/**'],
@@ -19,6 +20,7 @@ module.exports = {
     },
     {
       files: ['**/__tests__/**'],
+      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
       settings: {
         'import/resolver': {
           jest: {
